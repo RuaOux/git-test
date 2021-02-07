@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        /*
+             .Global：
+				encodeURI（）：url编码
+				decodeURI（）：url解码
+
+				encodeURIComponent（）：url编码
+				decodeURIComponent（）：url解码
+         */
+        var str = "陈在人";
+        var encode = encodeURI(str);
+        console.log(encode);
+        var decode = decodeURI(encode);
+        console.log(decode)
+
+        var str = "陈在人";
+        var encode1 = encodeURIComponent(str);
+        console.log(encode1);
+        var decode1 = decodeURIComponent(encode);
+        console.log(decode1)
+
+        var a = "acb";
+        console.log(a == Nan);
+        var b = NaN;
+        console.log(b == NaN);
+        console.log(isNaN(b));
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,158 @@
+.sk {
+    position: absolute;
+    top: 40px;
+    left: 185px;
+    width: 71px;
+    height: 32px;
+    padding-left: 14px;
+    padding-top: 3px;
+    border-left: 1px solid #b1191a;
+}
+
+.sk img {
+    width: 56px;
+    height: 25px;
+}
+
+.w .nav_hd,
+.w .nav_bd,
+.w .nav_hd li,
+.w .nav_bd li {
+    float: left;
+}
+
+.nav {
+    margin: 0;
+}
+
+.nav_hd {
+    width: 350px;
+    height: 45px;
+    line-height: 45px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.nav_hd li {
+    padding: 0 25px;
+}
+
+.nav_bd li {
+    position: relative;
+    padding: 0 20px;
+}
+
+.nav_bd li:last-child::after {
+    position: absolute;
+    top: 19px;
+    right: 6px;
+    content: '';
+    display: block;
+    width: 6px;
+    height: 6px;
+    transform: rotate(45deg);
+    transition: all .2s;
+    border-right: 1px solid #000;
+    border-bottom: 1px solid #000;
+}
+
+.nav_bd li:last-child:hover::after {
+    transform: rotate(225deg);
+}
+
+.li_hd {
+    height: 120px;
+    margin-bottom: 25px;
+}
+
+.li_hd img {
+    width: 100%;
+    height: 100%;
+}
+
+.li_bd {
+    width: 1220px;
+}
+
+.li_bd li {
+    position: relative;
+    float: left;
+    width: 289px;
+    height: 460px;
+    margin-right: 15px;
+    border: 1px solid transparent;
+}
+
+.li_bd li:hover {
+    border: 1px solid #b1191a;
+}
+
+.li_bd li:nth-child(4n) {
+    margin-right: 0;
+}
+
+.li_bd li h4 {
+    padding: 0 10px;
+    width: 265px;
+    height: 37px;
+}
+
+.li_bd li .info {
+    padding: 0 10px;
+    margin-top: 10px;
+    width: 250px;
+    height: 30px;
+}
+
+.info strong {
+    font-size: 22px;
+    color: #b1191a;
+}
+
+.info i {
+    font-size: 14px;
+    text-decoration: line-through;
+    color: #a4a4a4;
+}
+
+.qianggou {
+    position: absolute;
+    bottom: 70px;
+    left: 10px;
+    width: 270px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 14px;
+}
+
+.qianggou i {
+    float: right;
+}
+
+.qianggou .bar {
+    position: absolute;
+    bottom: 3px;
+    left: 68px;
+    width: 132px;
+    height: 12px;
+    border: 1px solid #b1191a;
+    border-radius: 6px;
+}
+
+.qianggou .bar li {
+    width: calc(132px - 15px);
+    height: 100%;
+    background-color: #b1191a;
+}
+
+.li_bd li a h6 {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    font-size: 20px;
+    color: #fff;
+    line-height: 50px;
+    text-align: center;
+    background-color: #b1191a;
+}

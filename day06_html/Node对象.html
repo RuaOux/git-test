@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+        
+        #div1 {
+            height: 200px;
+            width: 200px;
+        }
+        
+        #div2 {
+            background-color: blue;
+        }
+        
+        #div3 {
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="div1">div1
+        <div id="div2">
+            div2
+
+        </div>
+    </div>
+    <button class="btn1">删除</button>
+    <button class="btn2">添加</button>
+
+</body>
+<script>
+    var btn1 = document.querySelector('.btn1');
+    var btn2 = document.querySelector('.btn2');
+    var div = document.querySelector("#div1");
+    console.log(div);
+    btn1.addEventListener("click", function() {
+        var div2 = document.querySelector('#div2');
+        console.log(div2);
+        div.removeChild(div2);
+    })
+
+    btn2.addEventListener('click', function() {
+        var div3 = createElement('<div id ="div3">div3</div>');
+        console.log(div3);
+        div1.appendChild(div3);
+    })
+</script>
+
+</html>

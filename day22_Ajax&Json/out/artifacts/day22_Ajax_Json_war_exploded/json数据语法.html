@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        // 1. 定义基本数据格式
+        var person = {name:"张三",age:23,gender:true};
+
+        //alert(person)
+        console.log(person.name);
+        console.log(person["name"]);
+
+        // 获取name的值
+        // 2. 嵌套格式 {}-->[]
+        var persons = {"person": [
+                                {name:"张三",age:23,gender:true},
+                                {name:"李四",age:23,gender:true},
+                                {name:"王五",age:23,gender:true}
+                                ]
+        };
+        // 获取王五值
+        var name1 = persons.person[2].name;
+        console.log(name1)
+        //alert(persons)
+        // 3. 嵌套格式： []--> {}
+        var ps = [{name:"张三",age:23,gender:true},
+            {name:"李四",age:23,gender:true},
+            {name:"王五",age:23,gender:true}
+        ];
+        // 获取李四
+        var name2 = ps[1].name;
+        console.log(name2);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
