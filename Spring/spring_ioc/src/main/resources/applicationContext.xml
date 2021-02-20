@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--    <bean id="userDao" class="com.ruaoux.factory.StaticFactory" factory-method="getUserDao"></bean>-->
+     <!--   <bean id="factory" class="com.ruaoux.factory.DynameicFactory"></bean>
+        <bean id="userDao" factory-bean="factory" factory-method="getUserDao"></bean>-->
+
+    <!--<bean id="userDao" class="com.ruaoux.dao.impl.UserDaoImpl">
+        <property name="age" value="24" ></property>
+        <property name="username" value="zhangsan"></property>
+    </bean>-->
+    <bean id="userDao" class="com.ruaoux.dao.impl.UserDaoImpl">
+        <property name="strList">
+            <list>
+                <value>aaaa</value>
+                <value>bbbb</value>
+                <value>cccc</value>
+            </list>
+        </property>
+        <property name="userMap">
+            <map>
+                <entry key="user1" value-ref="user1"></entry>
+                <entry key="user2" value-ref="user2"></entry>
+            </map>
+        </property>
+        <property name="properties" >
+            <props>
+                <prop key="p1" >ppp1</prop>
+                <prop key="p2" >ppp2</prop>
+                <prop key="p3" >ppp3</prop>
+            </props>
+        </property>
+    </bean>
+    <bean id="user1" class="com.ruaoux.domain.User">
+        <property name="name" value="tom"></property>
+        <property name="age" value="12"></property>
+    </bean>
+    <bean id="user2" class="com.ruaoux.domain.User">
+        <property name="name" value="ruaoux"></property>
+        <property name="age" value="24"></property>
+    </bean>
+
+    <!--<bean id="userService" class="com.ruaoux.service.impl.UserServiceImpl" >
+        <property name="userDao" ref="userDao"></property>
+    </bean>-->
+
+    <!--    set方法-->
+<!--    <bean id="userService" class="com.ruaoux.service.impl.UserServiceImpl" p:userDao-ref="userDao" ></bean>-->
+    <!--    无参构造方法-->
+    <bean id="userService" class="com.ruaoux.service.impl.UserServiceImpl">
+        <constructor-arg name="userDao" ref="userDao"></constructor-arg>
+    </bean>
+
+    <import resource="applicationContext-product.xml" />
+    <import resource="applicationContext_user.xml" />
+
+
+
+
+</beans>
